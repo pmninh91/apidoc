@@ -134,7 +134,7 @@ function init($, _, locale, Handlebars, apiProject, apiData, prettyPrint, sample
             }
         });
         // sort by name ASC
-        var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+        var collator = new Intl.Collator(undefined, {numeric: true,sensitivity: 'base'});
         titles.sort(collator.compare);
 
         // custom order
