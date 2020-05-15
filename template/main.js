@@ -134,7 +134,8 @@ function init($, _, locale, Handlebars, apiProject, apiData, prettyPrint, sample
             }
         });
         // sort by name ASC
-        titles.sort();
+        var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+        titles.sort(collator.compare);
 
         // custom order
         if (apiProject.order)
